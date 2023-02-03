@@ -12,7 +12,8 @@
 	<h3> 설명 : ${dto.description }</h3>
 	<h3> 업로드파일명1 : ${dto.file1.getOriginalFilename() }</h3>
 	<h3> 업로드파일명2 : ${dto.file2.getOriginalFilename() }</h3>
-	<h3> c:/upload 폴더에 저장했습니다.</h3>
+	<h3> <%=MyWebConfig.savePath %></h3>
+<!-- 	<h3> c:/upload 폴더에 저장했습니다.</h3> -->
 
 </body>
 </html>

@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.example.demo.MyWebConfig;
+
 @Controller
 public class UploadController {
 	//uploadform 보여주는 메소드
@@ -25,7 +27,12 @@ public class UploadController {
 		// 저장한 결과 객체를 뷰 전달
 		// uploadprocess.jsp
 		
-		String savePath = "c:/upload/";
+		//for window
+		//String savePath = "c:/upload/";
+		
+		//for linux
+		String savePath = MyWebConfig.savePath;
+		
 		MultipartFile mf1 = dto.getFile1();
 		//파일명1 추출
 		String filename1 = mf1.getOriginalFilename();
