@@ -47,7 +47,7 @@ public class DownloadController {
 		int f_length = (int)f.length(); //byte단위
 		
 		//응답할 컨텐츠 다운로드 파일
-		response.setContentType("application/download"); //"text/html;charset=utf-8");
+		response.setContentType("application/download;charset=utf-8"); //"text/html;charset=utf-8");
 		response.setContentLength(f_length);
 		response.setHeader("Content-Disposition",  "attachment;filename=\"" + onefile + "\"");
 		
